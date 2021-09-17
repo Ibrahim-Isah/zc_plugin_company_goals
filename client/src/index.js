@@ -12,9 +12,7 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   <StylesProvider injectFirst>
     <Provider store={reduxStore}>
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
+      <App />
     </Provider>
   </StylesProvider>,
   document.getElementById('root')

@@ -11,8 +11,10 @@ import CentrifugeClient from 'centrifuge';
 import { useDispatch } from 'react-redux';
 import { saveVision } from 'redux/organizationVision.slice';
 import { activateSnackbar } from 'redux/snackbar.slice';
+import getMissions from './services/getMission';
 
 function App() {
+  console.log(getMissions());
   const dispatch = useDispatch();
   const centrifugeConnect = new CentrifugeClient('wss://realtime.zuri.chat/connection/websocket', { minRetry: 100000 });
   // const centrifugeConnect = new CentrifugeClient('ws://localhost:8000/connection/websocket');
