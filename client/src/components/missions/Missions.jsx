@@ -21,18 +21,10 @@ const Missions = () => {
    return (
       <div>
          <Title top="15%" left="10.5%" rsTop="5%" rsLeft="7%" color="#000000">Mission</Title>
-    <Box className="box">
-        <div>
-          {missionText
-            ? <MissionField>{missionText}</MissionField> : null
-            // <Input className="missionInput" padding="5px" placeholder="Click to add Mission"></Input>
-          }  
-             
-        </div>
-      <Editbutton onClick={() => dispatch(showEditMissionModal())} className="editMissionbutton" left="90%" rsLeft="80%" ><img src={editImg} alt="edit" /></Editbutton>
-       {/* <button type="button" onClick={() => dispatch(showEditMissionModal())}><img src={editImg} alt="edit" /></button> */}
-    </Box>
-
+        <Box className="box"> 
+            <MissionField>{missionText}</MissionField>
+            <Editbutton onClick={() => dispatch(showEditMissionModal())} className="editMissionbutton" left="90%" rsLeft="80%" ><img src={editImg} alt="edit" /></Editbutton>
+        </Box>
       </div>
    )
 }
