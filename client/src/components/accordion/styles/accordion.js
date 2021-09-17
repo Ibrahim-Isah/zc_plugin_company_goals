@@ -49,7 +49,7 @@ export const Header = styled.div`
   justify-content: space-between;
   cursor: pointer;
   margin-bottom: 1px;
-  font-size: 26px;
+  font-size: 22px;
   font-weight: normal;
   background: #f0fcf8;
   padding: 0.8em 1.2em 0.8em 1.2em;
@@ -57,7 +57,7 @@ export const Header = styled.div`
   align-items: center;
   img {
     // filter: brightness(0) invert(1);
-    width: 24px;
+    width: 22px;
     user-select: none;
     @media (max-width: 600px) {
       width: 16px;
@@ -69,7 +69,7 @@ export const Header = styled.div`
 `;
 
 export const Body = styled.div`
-  font-size: 26px;
+  font-size: 22px;
   font-weight: normal;
   line-height: normal;
   background: #f0fcf8;

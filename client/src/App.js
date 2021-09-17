@@ -1,3 +1,4 @@
+/* eslint-disable spaced-comment */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable import/order */
 /* eslint-disable no-unused-vars */
@@ -14,7 +15,7 @@ import { activateSnackbar } from 'redux/snackbar.slice';
 import getMissions from './services/getMission';
 
 function App() {
-  console.log(getMissions());
+  //console.log(getMissions());
   const dispatch = useDispatch();
   const centrifugeConnect = new CentrifugeClient('wss://realtime.zuri.chat/connection/websocket', { minRetry: 100000 });
   // const centrifugeConnect = new CentrifugeClient('ws://localhost:8000/connection/websocket');
