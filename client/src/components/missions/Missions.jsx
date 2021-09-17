@@ -1,6 +1,12 @@
+/* eslint-disable no-unneeded-ternary */
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/self-closing-comp */
 import React from 'react'
+import {useDispatch , useSelector} from 'react-redux';
+import { showEditMissionModal } from '../../redux/editMission.slice';
 import editImg from '../organization_vision/org_display_vision/visionAsset/editImg.png'
 import { 
+  MissionField,
    Editbutton,
    Input,
    Title,
@@ -8,14 +14,23 @@ import {
  } from './missions.style';
 
 const Missions = () => {
+
+  const dispatch = useDispatch();
+  const { missionText } = useSelector(state => state.editMission);
+
    return (
       <div>
          <Title top="15%" left="10.5%" rsTop="5%" rsLeft="7%" color="#000000">Mission</Title>
     <Box className="box">
         <div>
-          <Input className="missionInput" padding="5px" placeholder="Click to add Mission"></Input>
+          {missionText
+            ? <MissionField>{missionText}</MissionField> : null
+            // <Input className="missionInput" padding="5px" placeholder="Click to add Mission"></Input>
+          }  
+             
         </div>
-      <Editbutton className="editMissionbutton" left="90%" rsLeft="80%"><img src={editImg} alt="edit" /></Editbutton>
+      <Editbutton onClick={() => dispatch(showEditMissionModal())} className="editMissionbutton" left="90%" rsLeft="80%" ><img src={editImg} alt="edit" /></Editbutton>
+       {/* <button type="button" onClick={() => dispatch(showEditMissionModal())}><img src={editImg} alt="edit" /></button> */}
     </Box>
 
       </div>
