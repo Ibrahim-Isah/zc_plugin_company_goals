@@ -9,10 +9,13 @@ import BasicModal from '../components/EditGoal/EditGoal';
 import MissionVisionContainer from '../components/header/Header';
 import Mainside from '../components/mainside/Mainside';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import EditMission from '../components/Modal/EditMission';
 =======
 // import EditMission from '../components/modal/EditMission';
 >>>>>>> 30620f91486a710e2a622929f6fe8eac966d7d7f
+=======
+>>>>>>> 0b49a90b2854425b4bfa61da088d387a2f658bc1
 import OrganizationVisionEditModal from '../components/organization_vision/org_edit_vision/modal/EditOrgVisionModal';
 
 function App() {
