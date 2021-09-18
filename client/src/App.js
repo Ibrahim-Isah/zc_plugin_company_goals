@@ -12,10 +12,9 @@ import CentrifugeClient from 'centrifuge';
 import { useDispatch } from 'react-redux';
 import { saveVision } from 'redux/organizationVision.slice';
 import { activateSnackbar } from 'redux/snackbar.slice';
-import getMissions from './services/getMission';
+import { setNewMission } from './services/missionAPI';
 
 function App() {
-  //console.log(getMissions());
   const dispatch = useDispatch();
   const centrifugeConnect = new CentrifugeClient('wss://realtime.zuri.chat/connection/websocket', { minRetry: 100000 });
   // const centrifugeConnect = new CentrifugeClient('ws://localhost:8000/connection/websocket');
@@ -24,24 +23,26 @@ function App() {
   // );
   useEffect(() => {
     centrifugeConnect.on('connect', function (ctx) {
-      console.log('connected', ctx);
+      //  console.log('connected', ctx);
       dispatch(activateSnackbar({ content: 'Connected to Centifugo 🥳', severity: 'info' }));
     });
 
     centrifugeConnect.on('disconnect', function (ctx) {
-      console.log('disconnected', ctx);
+      //  console.log('disconnected', ctx);
       dispatch(activateSnackbar({ content: 'Failed to connect to Centifugo 😭', severity: 'error' }));
     });
 
     centrifugeConnect.subscribe('goalstest', function (ctx) {
-      console.log('goalstest', ctx);
+      //  console.log('goalstest', ctx);
     });
     centrifugeConnect.subscribe('edit_vision', function (ctx) {
-      console.log('edit_vision', ctx);
+      //  console.log('edit_vision', ctx);
       dispatch(saveVision(ctx.data));
     });
 
     centrifugeConnect.connect();
+
+    console.log(setNewMission());
   }, []);
   return (
     <>
