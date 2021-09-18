@@ -11,14 +11,9 @@ import React from 'react';
 // import { showEditMissionModal } from '../../redux/showEditMissionModal';
 import DisplayOrganizationVision from '../organization_vision/org_display_vision/VisionDisplay';
 import styled from 'styled-components';
-<<<<<<< HEAD
-import Missions from 'components/missions/Missions';
-import arrDown from '../organization_vision/org_display_vision/visionAsset/arr-down.png'
-
-=======
 import Missions from '../organization_mission/Missions';
 import arrDown from '../organization_vision/org_display_vision/visionAsset/arr-down.png';
->>>>>>> 30620f91486a710e2a622929f6fe8eac966d7d7f
+
 const Header = () => {
   // const dispatch = useDispatch();
   // eslint-disable-next-line no-unused-vars

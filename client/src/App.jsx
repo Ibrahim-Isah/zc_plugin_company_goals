@@ -9,15 +9,10 @@ import Faqs from './pages/Faq';
 import Home from './pages/Home';
 import { useEffect } from 'react';
 import CentrifugeClient from 'centrifuge';
-import { useDispatch } from 'react-redux';
-<<<<<<< HEAD:client/src/App.js
-import { saveVision } from 'redux/organizationVision.slice';
-import { activateSnackbar } from 'redux/snackbar.slice';
-import { setNewMission } from './services/missionAPI';
-=======
+import { useDispatch } from 'react-redux'
 import { saveVision } from './redux/organizationVision.slice';
 import { activateSnackbar } from './redux/snackbar.slice';
->>>>>>> 30620f91486a710e2a622929f6fe8eac966d7d7f:client/src/App.jsx
+import { setNewMission } from './services/missionAPI';
 
 function App() {
   const dispatch = useDispatch();
