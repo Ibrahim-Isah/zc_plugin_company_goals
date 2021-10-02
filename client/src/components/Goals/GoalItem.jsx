@@ -39,6 +39,8 @@ const GoalItem = ({ goalData }) => {
       )
       .then((response) => setTotalLikes(response.data.data.count))
       .catch((error) => console.log(error));
+    
+    setToggleLike(!toggleLike)
   });
 
   const handleSetLike = (e) => {
@@ -81,6 +83,8 @@ const GoalItem = ({ goalData }) => {
       )
       .then((response) => setDislike(response.data.message))
       .catch((error) => console.log(error));
+    
+    setToggleDislike(!toggleDislike)
   };
 
   // const loop = (e) => {
