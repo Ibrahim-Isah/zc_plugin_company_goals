@@ -1,6 +1,6 @@
 # This is the Company's Goals plugin for Zuri Chat
 
-## Getting Started
+## Getting Start
 
 Make sure you have nodejs and yarn installed by running the following command:
 
